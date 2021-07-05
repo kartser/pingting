@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="javascript" href="anime.min.js">
-  <link rel="icon" href="android-chrome-192x192.png">
-
-    <title>Your Vault</title>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-  <body>
-<h1> <a target="blank" href="https://techstacker.com/how-to-loop-background-color-animation-css/"></a>Your uninteruptted World.....</h1>
-<p>
+<body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Your Diary</a>
-  <a href="#">To Do list</a>
-  <a href="#">Most Visited Sites</a>
-  <a href="#">Acconts/Password</a>
-</div>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <div id="login_div" class="main-div">
+    <h3>Firebase Web login Example</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
 
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDS4NxxNopa5a-Pl804pJ-a3mtP8PnRqHM",
+    authDomain: "authentication-a1cf4.firebaseapp.com",
+    projectId: "authentication-a1cf4",
+    storageBucket: "authentication-a1cf4.appspot.com",
+    messagingSenderId: "347806632187",
+    appId: "1:347806632187:web:51d292e93c35d17840085e",
+    measurementId: "G-K4C3X4XB2G"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 </script>
-</p>
+<script src="index.js"></script>
 
+</body>
 </html>
